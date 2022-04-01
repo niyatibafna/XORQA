@@ -62,7 +62,7 @@ class BiEncoder(nn.Module):
         # The following lines are added avoid the load_state_dict error caused by trying to load the model trained with Language Agnostic Code;
         # This is a temporary fix; 
         hidden_size = 768
-        num_langs = 8 
+        num_langs = 7 
         self.q_emb_classify_language = torch.nn.Linear(hidden_size, num_langs)
         self.ctx_emb_classify_language = torch.nn.Linear(hidden_size, num_langs)
 
