@@ -1,0 +1,581 @@
+/home/CE/nbafna/anaconda3/envs/story_recom/bin/python3: can't open file '../baselines/DPR/train_dense_encoder.py': [Errno 2] No such file or directory
+/home/CE/nbafna/anaconda3/envs/story_recom/bin/python3: can't open file '../baselines/DPR/train_dense_encoder.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/runpy.py", line 192, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/distributed/launch.py", line 261, in <module>
+    main()
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/distributed/launch.py", line 256, in main
+    raise subprocess.CalledProcessError(returncode=process.returncode,
+subprocess.CalledProcessError: Command '['/home/CE/nbafna/anaconda3/envs/story_recom/bin/python3', '-u', '../baselines/DPR/train_dense_encoder.py', '--local_rank=2', '--max_grad_norm', '2.0', '--encoder_model_type', 'hf_bert', '--pretrained_model_cfg', 'bert-base-multilingual-uncased', '--model_file', '../biencoders/pretrained/dpr_biencoder_B', '--seed', '12345', '--sequence_length', '256', '--warmup_steps', '1237', '--batch_size', '12', '--do_lower_case', '--train_file', '../data/NQ/biencoder-nq-train.json', '--dev_file', '../data/NQ/biencoder-nq-dev.json', '--output_dir', '../biencoders/trained/B+A/', '--learning_rate', '2e-05', '--num_train_epochs', '40', '--dev_batch_size', '12', '--val_av_rank_start_epoch', '10', '--restart']' returned non-zero exit status 2.
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/home/CE/nbafna/anaconda3/envs/story_recom/bin/python3: can't open file '../baselines/DPR/train_dense_encoder.py': [Errno 2] No such file or directory
+Initialized host jones-6 as d.rank 1 on device=cuda:1, n_gpu=1, world size=3
+16-bits training: False 
+ **************** CONFIGURATION **************** 
+adam_betas                     -->   (0.9, 0.999)
+adam_eps                       -->   1e-08
+batch_size                     -->   12
+checkpoint_file_name           -->   dpr_biencoder
+dev_batch_size                 -->   12
+dev_file                       -->   ../data/NQ/biencoder-nq-dev.json
+device                         -->   cuda:1
+distributed_world_size         -->   3
+do_lower_case                  -->   True
+dropout                        -->   0.1
+encoder_model_type             -->   hf_bert
+eval_per_epoch                 -->   1
+fix_ctx_encoder                -->   False
+fp16                           -->   False
+fp16_opt_level                 -->   O1
+global_loss_buf_sz             -->   150000
+gradient_accumulation_steps    -->   1
+hard_negatives                 -->   1
+learning_rate                  -->   2e-05
+local_rank                     -->   1
+log_batch_step                 -->   100
+max_grad_norm                  -->   2.0
+model_file                     -->   ../biencoders/pretrained/dpr_biencoder_B
+n_gpu                          -->   1
+no_cuda                        -->   False
+num_train_epochs               -->   40.0
+other_negatives                -->   0
+output_dir                     -->   ../biencoders/trained/B+A/
+pretrained_file                -->   None
+pretrained_model_cfg           -->   bert-base-multilingual-uncased
+projection_dim                 -->   0
+restart                        -->   True
+seed                           -->   12345
+sequence_length                -->   256
+shuffle_positive_ctx           -->   False
+train_file                     -->   ../data/NQ/biencoder-nq-train.json
+train_files_upsample_rates     -->   None
+train_rolling_loss_step        -->   100
+val_av_rank_bsz                -->   128
+val_av_rank_hard_neg           -->   30
+val_av_rank_max_qs             -->   10000
+val_av_rank_other_neg          -->   30
+val_av_rank_start_epoch        -->   10
+warmup_steps                   -->   1237
+weight_decay                   -->   0.0
+ **************** CONFIGURATION **************** 
+***** Initializing components for training *****
+Reading saved model from ../biencoders/pretrained/dpr_biencoder_B
+Initialized host jones-6 as d.rank 2 on device=cuda:2, n_gpu=1, world size=3
+16-bits training: False 
+ **************** CONFIGURATION **************** 
+adam_betas                     -->   (0.9, 0.999)
+adam_eps                       -->   1e-08
+batch_size                     -->   12
+checkpoint_file_name           -->   dpr_biencoder
+dev_batch_size                 -->   12
+dev_file                       -->   ../data/NQ/biencoder-nq-dev.json
+device                         -->   cuda:2
+distributed_world_size         -->   3
+do_lower_case                  -->   True
+dropout                        -->   0.1
+encoder_model_type             -->   hf_bert
+eval_per_epoch                 -->   1
+fix_ctx_encoder                -->   False
+fp16                           -->   False
+fp16_opt_level                 -->   O1
+global_loss_buf_sz             -->   150000
+gradient_accumulation_steps    -->   1
+hard_negatives                 -->   1
+learning_rate                  -->   2e-05
+local_rank                     -->   2
+log_batch_step                 -->   100
+max_grad_norm                  -->   2.0
+model_file                     -->   ../biencoders/pretrained/dpr_biencoder_B
+n_gpu                          -->   1
+no_cuda                        -->   False
+num_train_epochs               -->   40.0
+other_negatives                -->   0
+output_dir                     -->   ../biencoders/trained/B+A/
+pretrained_file                -->   None
+pretrained_model_cfg           -->   bert-base-multilingual-uncased
+projection_dim                 -->   0
+restart                        -->   True
+seed                           -->   12345
+sequence_length                -->   256
+shuffle_positive_ctx           -->   False
+train_file                     -->   ../data/NQ/biencoder-nq-train.json
+train_files_upsample_rates     -->   None
+train_rolling_loss_step        -->   100
+val_av_rank_bsz                -->   128
+val_av_rank_hard_neg           -->   30
+val_av_rank_max_qs             -->   10000
+val_av_rank_other_neg          -->   30
+val_av_rank_start_epoch        -->   10
+warmup_steps                   -->   1237
+weight_decay                   -->   0.0
+ **************** CONFIGURATION **************** 
+***** Initializing components for training *****
+Reading saved model from ../biencoders/pretrained/dpr_biencoder_B
+Initialized host jones-6 as d.rank 0 on device=cuda:0, n_gpu=1, world size=3
+16-bits training: False 
+ **************** CONFIGURATION **************** 
+adam_betas                     -->   (0.9, 0.999)
+adam_eps                       -->   1e-08
+batch_size                     -->   12
+checkpoint_file_name           -->   dpr_biencoder
+dev_batch_size                 -->   12
+dev_file                       -->   ../data/NQ/biencoder-nq-dev.json
+device                         -->   cuda:0
+distributed_world_size         -->   3
+do_lower_case                  -->   True
+dropout                        -->   0.1
+encoder_model_type             -->   hf_bert
+eval_per_epoch                 -->   1
+fix_ctx_encoder                -->   False
+fp16                           -->   False
+fp16_opt_level                 -->   O1
+global_loss_buf_sz             -->   150000
+gradient_accumulation_steps    -->   1
+hard_negatives                 -->   1
+learning_rate                  -->   2e-05
+local_rank                     -->   0
+log_batch_step                 -->   100
+max_grad_norm                  -->   2.0
+model_file                     -->   ../biencoders/pretrained/dpr_biencoder_B
+n_gpu                          -->   1
+no_cuda                        -->   False
+num_train_epochs               -->   40.0
+other_negatives                -->   0
+output_dir                     -->   ../biencoders/trained/B+A/
+pretrained_file                -->   None
+pretrained_model_cfg           -->   bert-base-multilingual-uncased
+projection_dim                 -->   0
+restart                        -->   True
+seed                           -->   12345
+sequence_length                -->   256
+shuffle_positive_ctx           -->   False
+train_file                     -->   ../data/NQ/biencoder-nq-train.json
+train_files_upsample_rates     -->   None
+train_rolling_loss_step        -->   100
+val_av_rank_bsz                -->   128
+val_av_rank_hard_neg           -->   30
+val_av_rank_max_qs             -->   10000
+val_av_rank_other_neg          -->   30
+val_av_rank_start_epoch        -->   10
+warmup_steps                   -->   1237
+weight_decay                   -->   0.0
+ **************** CONFIGURATION **************** 
+***** Initializing components for training *****
+Reading saved model from ../biencoders/pretrained/dpr_biencoder_B
+model_state_dict keys odict_keys(['model_dict', 'optimizer_dict', 'scheduler_dict', 'offset', 'epoch', 'encoder_params'])
+Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-multilingual-uncased
+Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+Overriding args parameter value from checkpoint state. Param = sequence_length, value = 256
+PyTorch version 1.6.0 available.
+model_state_dict keys odict_keys(['model_dict', 'optimizer_dict', 'scheduler_dict', 'offset', 'epoch', 'encoder_params'])
+Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-multilingual-uncased
+Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+Overriding args parameter value from checkpoint state. Param = sequence_length, value = 256
+PyTorch version 1.6.0 available.
+model_state_dict keys odict_keys(['model_dict', 'optimizer_dict', 'scheduler_dict', 'offset', 'epoch', 'encoder_params'])
+Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-multilingual-uncased
+Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+Overriding args parameter value from checkpoint state. Param = sequence_length, value = 256
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json from cache at /home/CE/nbafna/.cache/torch/transformers/33b56ce0f312e47e4d77a57791a4fc6233ae4a560dd2bdd186107058294e58ab.fcb1786f49c279f0e0f158c9972b9bd9f6c0edb5d893dcb9b530d714d86f0edc
+Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 105879
+}
+
+PyTorch version 1.6.0 available.
+loading weights file https://cdn.huggingface.co/bert-base-multilingual-uncased-pytorch_model.bin from cache at /home/CE/nbafna/.cache/torch/transformers/b72dd13aa8437628227c4928499f2476a84af4ab7ed75eb1365c5ae9fdbd7638.54b4dad9cc3db9aa8448458b782d11ab07c80dedb951906fd2f684a00ecdb1ee
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json from cache at /home/CE/nbafna/.cache/torch/transformers/33b56ce0f312e47e4d77a57791a4fc6233ae4a560dd2bdd186107058294e58ab.fcb1786f49c279f0e0f158c9972b9bd9f6c0edb5d893dcb9b530d714d86f0edc
+Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 105879
+}
+
+loading weights file https://cdn.huggingface.co/bert-base-multilingual-uncased-pytorch_model.bin from cache at /home/CE/nbafna/.cache/torch/transformers/b72dd13aa8437628227c4928499f2476a84af4ab7ed75eb1365c5ae9fdbd7638.54b4dad9cc3db9aa8448458b782d11ab07c80dedb951906fd2f684a00ecdb1ee
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json from cache at /home/CE/nbafna/.cache/torch/transformers/33b56ce0f312e47e4d77a57791a4fc6233ae4a560dd2bdd186107058294e58ab.fcb1786f49c279f0e0f158c9972b9bd9f6c0edb5d893dcb9b530d714d86f0edc
+Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 105879
+}
+
+loading weights file https://cdn.huggingface.co/bert-base-multilingual-uncased-pytorch_model.bin from cache at /home/CE/nbafna/.cache/torch/transformers/b72dd13aa8437628227c4928499f2476a84af4ab7ed75eb1365c5ae9fdbd7638.54b4dad9cc3db9aa8448458b782d11ab07c80dedb951906fd2f684a00ecdb1ee
+All model checkpoint weights were used when initializing HFBertEncoder.
+
+All the weights of HFBertEncoder were initialized from the model checkpoint at bert-base-multilingual-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use HFBertEncoder for predictions without further training.
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json from cache at /home/CE/nbafna/.cache/torch/transformers/33b56ce0f312e47e4d77a57791a4fc6233ae4a560dd2bdd186107058294e58ab.fcb1786f49c279f0e0f158c9972b9bd9f6c0edb5d893dcb9b530d714d86f0edc
+Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 105879
+}
+
+loading weights file https://cdn.huggingface.co/bert-base-multilingual-uncased-pytorch_model.bin from cache at /home/CE/nbafna/.cache/torch/transformers/b72dd13aa8437628227c4928499f2476a84af4ab7ed75eb1365c5ae9fdbd7638.54b4dad9cc3db9aa8448458b782d11ab07c80dedb951906fd2f684a00ecdb1ee
+All model checkpoint weights were used when initializing HFBertEncoder.
+
+All the weights of HFBertEncoder were initialized from the model checkpoint at bert-base-multilingual-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use HFBertEncoder for predictions without further training.
+All model checkpoint weights were used when initializing HFBertEncoder.
+
+All the weights of HFBertEncoder were initialized from the model checkpoint at bert-base-multilingual-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use HFBertEncoder for predictions without further training.
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json from cache at /home/CE/nbafna/.cache/torch/transformers/33b56ce0f312e47e4d77a57791a4fc6233ae4a560dd2bdd186107058294e58ab.fcb1786f49c279f0e0f158c9972b9bd9f6c0edb5d893dcb9b530d714d86f0edc
+Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 105879
+}
+
+loading weights file https://cdn.huggingface.co/bert-base-multilingual-uncased-pytorch_model.bin from cache at /home/CE/nbafna/.cache/torch/transformers/b72dd13aa8437628227c4928499f2476a84af4ab7ed75eb1365c5ae9fdbd7638.54b4dad9cc3db9aa8448458b782d11ab07c80dedb951906fd2f684a00ecdb1ee
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json from cache at /home/CE/nbafna/.cache/torch/transformers/33b56ce0f312e47e4d77a57791a4fc6233ae4a560dd2bdd186107058294e58ab.fcb1786f49c279f0e0f158c9972b9bd9f6c0edb5d893dcb9b530d714d86f0edc
+Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 105879
+}
+
+loading weights file https://cdn.huggingface.co/bert-base-multilingual-uncased-pytorch_model.bin from cache at /home/CE/nbafna/.cache/torch/transformers/b72dd13aa8437628227c4928499f2476a84af4ab7ed75eb1365c5ae9fdbd7638.54b4dad9cc3db9aa8448458b782d11ab07c80dedb951906fd2f684a00ecdb1ee
+All model checkpoint weights were used when initializing HFBertEncoder.
+
+All the weights of HFBertEncoder were initialized from the model checkpoint at bert-base-multilingual-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use HFBertEncoder for predictions without further training.
+All model checkpoint weights were used when initializing HFBertEncoder.
+
+All the weights of HFBertEncoder were initialized from the model checkpoint at bert-base-multilingual-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use HFBertEncoder for predictions without further training.
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt from cache at /home/CE/nbafna/.cache/torch/transformers/bb773818882b0524dc53a1b31a2cc95bc489f000e7e19773ba07846011a6c711.535306b226c42cebebbc0dabc83b92ab11260e9919e21e2ab0beb301f267b4c7
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt from cache at /home/CE/nbafna/.cache/torch/transformers/bb773818882b0524dc53a1b31a2cc95bc489f000e7e19773ba07846011a6c711.535306b226c42cebebbc0dabc83b92ab11260e9919e21e2ab0beb301f267b4c7
+All model checkpoint weights were used when initializing HFBertEncoder.
+
+All the weights of HFBertEncoder were initialized from the model checkpoint at bert-base-multilingual-uncased.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use HFBertEncoder for predictions without further training.
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt from cache at /home/CE/nbafna/.cache/torch/transformers/bb773818882b0524dc53a1b31a2cc95bc489f000e7e19773ba07846011a6c711.535306b226c42cebebbc0dabc83b92ab11260e9919e21e2ab0beb301f267b4c7
+Loading checkpoint @ batch=81673 and epoch=4
+Loading saved model state ...
+Loading checkpoint @ batch=81673 and epoch=4
+Loading checkpoint @ batch=81673 and epoch=4
+Loading saved model state ...
+Loading saved model state ...
+Reading file ../data/NQ/biencoder-nq-train.json
+Reading file ../data/NQ/biencoder-nq-train.json
+Reading file ../data/NQ/biencoder-nq-train.json
+Aggregated data size: 58880
+Total cleaned data size: 58880
+  Total iterations per epoch=1636
+ Total updates=65440
+  Eval step = 1636
+***** Training *****
+***** Epoch 0 *****
+Traceback (most recent call last):
+  File "../baselines/DPR/train_dense_encoder.py", line 568, in <module>
+    main()
+  File "../baselines/DPR/train_dense_encoder.py", line 558, in main
+    trainer.run_train()
+  File "../baselines/DPR/train_dense_encoder.py", line 130, in run_train
+    self._train_epoch(scheduler, epoch, eval_step, train_iterator)
+  File "../baselines/DPR/train_dense_encoder.py", line 326, in _train_epoch
+    loss, correct_cnt = _do_biencoder_fwd_pass(self.biencoder, biencoder_batch, self.tensorizer, args)
+  File "../baselines/DPR/train_dense_encoder.py", line 474, in _do_biencoder_fwd_pass
+    model_out = model(input.question_ids, input.question_segments, q_attn_mask, input.context_ids,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 511, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/biencoder.py", line 93, in forward
+    _ctx_seq, ctx_pooled_out, _ctx_hidden = self.get_representation(self.ctx_model, context_ids, ctx_segments,
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/biencoder.py", line 84, in get_representation
+    sequence_output, pooled_output, hidden_states = sub_model(ids, segments, attn_mask)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/hf_models.py", line 127, in forward
+    sequence_output, pooled_output = super().forward(input_ids=input_ids, token_type_ids=token_type_ids,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 755, in forward
+    encoder_outputs = self.encoder(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 433, in forward
+    layer_outputs = layer_module(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 370, in forward
+    self_attention_outputs = self.attention(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 314, in forward
+    self_outputs = self.self(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 250, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/functional.py", line 973, in dropout
+    else _VF.dropout(input, p, training))
+RuntimeError: CUDA out of memory. Tried to allocate 18.00 MiB (GPU 1; 11.93 GiB total capacity; 11.15 GiB already allocated; 512.00 KiB free; 11.36 GiB reserved in total by PyTorch)
+Aggregated data size: 58880
+Total cleaned data size: 58880
+  Total iterations per epoch=1636
+ Total updates=65440
+  Eval step = 1636
+***** Training *****
+***** Epoch 0 *****
+Traceback (most recent call last):
+  File "../baselines/DPR/train_dense_encoder.py", line 568, in <module>
+    main()
+  File "../baselines/DPR/train_dense_encoder.py", line 558, in main
+    trainer.run_train()
+  File "../baselines/DPR/train_dense_encoder.py", line 130, in run_train
+    self._train_epoch(scheduler, epoch, eval_step, train_iterator)
+  File "../baselines/DPR/train_dense_encoder.py", line 326, in _train_epoch
+    loss, correct_cnt = _do_biencoder_fwd_pass(self.biencoder, biencoder_batch, self.tensorizer, args)
+  File "../baselines/DPR/train_dense_encoder.py", line 474, in _do_biencoder_fwd_pass
+    model_out = model(input.question_ids, input.question_segments, q_attn_mask, input.context_ids,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 511, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/biencoder.py", line 93, in forward
+    _ctx_seq, ctx_pooled_out, _ctx_hidden = self.get_representation(self.ctx_model, context_ids, ctx_segments,
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/biencoder.py", line 84, in get_representation
+    sequence_output, pooled_output, hidden_states = sub_model(ids, segments, attn_mask)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/hf_models.py", line 127, in forward
+    sequence_output, pooled_output = super().forward(input_ids=input_ids, token_type_ids=token_type_ids,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 755, in forward
+    encoder_outputs = self.encoder(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 433, in forward
+    layer_outputs = layer_module(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 370, in forward
+    self_attention_outputs = self.attention(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 314, in forward
+    self_outputs = self.self(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 231, in forward
+    mixed_key_layer = self.key(hidden_states)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 91, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/functional.py", line 1676, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 18.00 MiB (GPU 0; 11.93 GiB total capacity; 6.72 GiB already allocated; 10.25 MiB free; 6.92 GiB reserved in total by PyTorch)
+Aggregated data size: 58880
+Total cleaned data size: 58880
+  Total iterations per epoch=1636
+ Total updates=65440
+  Eval step = 1636
+***** Training *****
+***** Epoch 0 *****
+Traceback (most recent call last):
+  File "../baselines/DPR/train_dense_encoder.py", line 568, in <module>
+    main()
+  File "../baselines/DPR/train_dense_encoder.py", line 558, in main
+    trainer.run_train()
+  File "../baselines/DPR/train_dense_encoder.py", line 130, in run_train
+    self._train_epoch(scheduler, epoch, eval_step, train_iterator)
+  File "../baselines/DPR/train_dense_encoder.py", line 326, in _train_epoch
+    loss, correct_cnt = _do_biencoder_fwd_pass(self.biencoder, biencoder_batch, self.tensorizer, args)
+  File "../baselines/DPR/train_dense_encoder.py", line 474, in _do_biencoder_fwd_pass
+    model_out = model(input.question_ids, input.question_segments, q_attn_mask, input.context_ids,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 511, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/biencoder.py", line 93, in forward
+    _ctx_seq, ctx_pooled_out, _ctx_hidden = self.get_representation(self.ctx_model, context_ids, ctx_segments,
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/biencoder.py", line 84, in get_representation
+    sequence_output, pooled_output, hidden_states = sub_model(ids, segments, attn_mask)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/local/home/CE/nbafna/projects/XORQA_2/XORQA/baselines/DPR/dpr/models/hf_models.py", line 127, in forward
+    sequence_output, pooled_output = super().forward(input_ids=input_ids, token_type_ids=token_type_ids,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 755, in forward
+    encoder_outputs = self.encoder(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 433, in forward
+    layer_outputs = layer_module(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 370, in forward
+    self_attention_outputs = self.attention(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 314, in forward
+    self_outputs = self.self(
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/transformers/modeling_bert.py", line 250, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/nn/functional.py", line 973, in dropout
+    else _VF.dropout(input, p, training))
+RuntimeError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 2; 11.93 GiB total capacity; 11.08 GiB already allocated; 68.12 MiB free; 11.29 GiB reserved in total by PyTorch)
+Traceback (most recent call last):
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/runpy.py", line 192, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/distributed/launch.py", line 261, in <module>
+    main()
+  File "/home/CE/nbafna/anaconda3/envs/story_recom/lib/python3.8/site-packages/torch/distributed/launch.py", line 256, in main
+    raise subprocess.CalledProcessError(returncode=process.returncode,
+subprocess.CalledProcessError: Command '['/home/CE/nbafna/anaconda3/envs/story_recom/bin/python3', '-u', '../baselines/DPR/train_dense_encoder.py', '--local_rank=2', '--max_grad_norm', '2.0', '--encoder_model_type', 'hf_bert', '--pretrained_model_cfg', 'bert-base-multilingual-uncased', '--model_file', '../biencoders/pretrained/dpr_biencoder_B', '--seed', '12345', '--sequence_length', '256', '--warmup_steps', '1237', '--batch_size', '12', '--do_lower_case', '--train_file', '../data/NQ/biencoder-nq-train.json', '--dev_file', '../data/NQ/biencoder-nq-dev.json', '--output_dir', '../biencoders/trained/B+A/', '--learning_rate', '2e-05', '--num_train_epochs', '40', '--dev_batch_size', '12', '--val_av_rank_start_epoch', '10', '--restart']' returned non-zero exit status 1.
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

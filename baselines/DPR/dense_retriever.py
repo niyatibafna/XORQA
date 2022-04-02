@@ -213,7 +213,7 @@ def save_results(passages: Dict[object, Tuple[str, str]], questions: List[str], 
         ctxs = [ctx["text"] for ctx in example["ctxs"]]
         lang = example["lang"]
         xor_output_prediction_format.append({"id": q_id, "lang": lang, "ctxs" : ctxs})
-    
+    print ("{}_xor_retrieve_results.json".format(out_file.split(".")[0]))
     with open("{}_xor_retrieve_results.json".format(out_file.split(".")[0]), 'w') as outfile:
         json.dump(xor_output_prediction_format, outfile)
 
