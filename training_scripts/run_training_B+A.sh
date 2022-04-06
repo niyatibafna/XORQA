@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=2,3 python3 -m torch.distributed.launch --nproc_per_node=2 ../baselines/DPR/train_dense_encoder.py \
+python3 -m torch.distributed.launch --nproc_per_node=2 ../baselines/DPR/train_dense_encoder.py \
 --max_grad_norm 2.0 --encoder_model_type hf_bert --pretrained_model_cfg bert-base-multilingual-uncased \
 --model_file "../biencoders/pretrained/dpr_biencoder_B" --seed 12345 \
 --sequence_length 256 --warmup_steps 1237 --batch_size 12 --do_lower_case \
