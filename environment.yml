@@ -90,7 +90,6 @@ dependencies:
     - tokenizers==0.8.1rc1
     - tomli==2.0.0
     - torch==1.6.0
-    - torchtext==0.11.0
     - tqdm==4.62.3
     - transformers==3.0.2
     - typer==0.4.0
