@@ -134,7 +134,7 @@ def parse_qa_jsonlines_file(location) -> Iterator[Tuple[str, str, List[str], str
         question = row["question"]
         answers = row["answers"]
         q_id = row["id"]
-        lang = "en" #row["lang"]
+        lang = row["lang"]
         yield question, q_id, answers, lang
 
 def validate(passages: Dict[object, Tuple[str, str]], answers: List[List[str]],
